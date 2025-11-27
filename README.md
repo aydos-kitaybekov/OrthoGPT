@@ -15,10 +15,11 @@ OrthoGPT is a Graph-based Retrieval-Augmented Generation (RAG) system designed t
 - **Goal:** Define Node Types (Anatomy, Condition, Procedure, etc.) and Edge Types (AFFECTS, TREATED_BY, etc.).
 - **Outcome:** Defined `src/graph/ontology.py` with orthopedic-specific entities and relationships.
 
-### Phase 3: Knowledge Graph Construction
+### Phase 3: Knowledge Graph Construction [In Progress]
 - **Goal:** Extract entities and relationships and build the graph.
 - **Stack:** LlamaIndex, Neo4j.
 - **Hybrid Indexing:** Vector Index + Graph Database.
+- **Status:** `src/graph/builder.py` implemented. Requires running Neo4j instance.
 
 ### Phase 4: Retrieval Logic
 - **Goal:** Query processing using Vector Search + Graph Traversal.
