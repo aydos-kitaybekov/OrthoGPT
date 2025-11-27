@@ -1,0 +1,12 @@
+llama-index
+llama-index-graph-stores-neo4j
+llama-index-llms-openai
+llama-index-embeddings-openai
+neo4j
+openai
+unstructured[pdf]
+pymupdf
+python-dotenv
+pandas
+ragas
+deepeval
