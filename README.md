@@ -5,13 +5,15 @@ OrthoGPT is a Graph-based Retrieval-Augmented Generation (RAG) system designed t
 
 ## Roadmap
 
-### Phase 1: Data Preparation & Ingestion
+### Phase 1: Data Preparation & Ingestion [Completed]
 - **Goal:** Convert unstructured PDF data into clean, structured text and distinct chunks.
 - **Tools:** Unstructured.io, PyMuPDF.
 - **Strategy:** Semantic Chunking by medical concepts.
+- **Status:** Ingestion script implemented using local HuggingFace embeddings to avoid rate limits.
 
-### Phase 2: Ontology Design
+### Phase 2: Ontology Design [Completed]
 - **Goal:** Define Node Types (Anatomy, Condition, Procedure, etc.) and Edge Types (AFFECTS, TREATED_BY, etc.).
+- **Outcome:** Defined `src/graph/ontology.py` with orthopedic-specific entities and relationships.
 
 ### Phase 3: Knowledge Graph Construction
 - **Goal:** Extract entities and relationships and build the graph.
@@ -35,3 +37,28 @@ OrthoGPT is a Graph-based Retrieval-Augmented Generation (RAG) system designed t
 - `src/`: Source code for ingestion, graph construction, and retrieval.
 - `notebooks/`: Jupyter notebooks for experimentation.
 - `tests/`: Unit and integration tests.
+
+## Setup & Usage
+
+### Prerequisites
+- Python 3.11
+- Google Gemini API Key
+- Neo4j Database
+
+### Installation
+1. Create a virtual environment:
+   ```bash
+   python3.11 -m venv venv
+   source venv/bin/activate
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Configure environment:
+   - Add your `GOOGLE_API_KEY` to `.env`.
+
+### Running Ingestion
+```bash
+venv/bin/python3 main.py
+```

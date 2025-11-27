@@ -1,9 +1,9 @@
 llama-index
 llama-index-graph-stores-neo4j
-llama-index-llms-openai
-llama-index-embeddings-openai
+llama-index-llms-gemini
+llama-index-embeddings-google
 neo4j
-openai
+google-generativeai
 unstructured[pdf]
 pymupdf
 python-dotenv
